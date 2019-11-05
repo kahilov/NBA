@@ -11,7 +11,32 @@
 <body>
     <input type="text" id="team-input" placeholder="What's the team?">
     <button onclick=fetchTeamData()>Search</button>
-    <script src="./jquery/dist/jquery.js"></script>
+    <button onclick=fetchDreamTeamData()>dreamTeam</button>
+    <script id="player-template" type="text/x-handlebars-template">
+          {{#each teamData}}
+        <div class="flex-container" data-firstName={{firstName}} data-lastName={{lastName}} data-pos={{pos}} data-jersey={{jersey}}>
+          <div class="text" id="name">{{firstName}} </div>
+          <div>{{lastName}}</div>
+          <div class="text"> - {{jersey}}</div>
+          <img class="img" src =https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}>
+          <div class="text">{{pos}}</div>
+        </div>
+          {{/each}}
+      </script>
+    <script id="dreamTeam-template" type="text/x-handlebars-template">
+        {{#each dreamTeam}}
+      <div class="flex-container2">
+        <div class="text">{{firstName}} {{lastName}}</div>
+        <div class="text"> - {{jersey}}</div>
+        <img class="img" src =https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}>
+        <div class="text">{{pos}}</div>
+      </div>
+        {{/each}}
+    </script>
+    <div id="players"></div>
+    <div id="dreamTeam"></div>
+    <script src="handlebars/dist/handlebars.js"></script>
+    <script src="jquery/dist/jquery.js"></script>
     <script src="main.js"></script>
 </body>
 

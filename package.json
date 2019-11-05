@@ -1,7 +1,6 @@
 {
   "name": "nba_project",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,9 +9,23 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "handlebars": "^4.4.5",
     "jquery": "^3.4.1",
+    "mongoose": "^5.7.7",
+    "nodemon": "^1.19.4",
     "path": "^0.12.7",
     "request": "^2.88.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kahilov/NBA.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kahilov/NBA/issues"
+  },
+  "homepage": "https://github.com/kahilov/NBA#readme",
+  "description": ""
 }
